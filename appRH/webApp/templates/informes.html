@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Informes de Recursos Humanos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Posición</th>
+                <th>Departamento</th>
+                <th>Fecha de Ingreso</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for informe in informes %}
+            <tr>
+                <td>{{ informe.id }}</td>
+                <td>{{ informe.nombre }}</td>
+                <td>{{ informe.posicion }}</td>
+                <td>{{ informe.departamento }}</td>
+                <td>{{ informe.fecha_ingreso }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
